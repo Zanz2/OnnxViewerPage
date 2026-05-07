@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onnex - Onnx Viewer Support</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f0f5ff;
+            color: #333;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            color: #2c5282;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #718096;
+            font-size: 1.1rem;
+        }
+        
+        h2 {
+            color: #2c5282;
+            font-size: 1.8rem;
+            margin: 30px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        
+        .faq-container {
+            display: grid;
+            gap: 20px;
+        }
+        
+        .faq-item {
+            background-color: #f8fafc;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .faq-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .question {
+            font-weight: 600;
+            color: #2c5282;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+        
+        .answer {
+            color: #4a5568;
+        }
+        
+        .contact-section {
+            background-color: #ebf4ff;
+            border-radius: 8px;
+            padding: 30px;
+            margin-top: 40px;
+            text-align: center;
+        }
+        
+        .contact-section p {
+            margin-bottom: 20px;
+        }
+        
+        .contact-button {
+            display: inline-block;
+            background-color: #4299e1;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        
+        .contact-button:hover {
+            background-color: #3182ce;
+        }
+        
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            color: #718096;
+            font-size: 0.9rem;
+        }
+        
+        footer a {
+            color: #4299e1;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        footer a:hover {
+            color: #2c5282;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Onnex Support page</h1>
+            <p class="subtitle">Find answers to frequently asked questions or send me an email</p>
+        </header>
+        
+        <h2>Frequently Asked Questions</h2>
+        
+        <div class="faq-container">
+
+            <div class="faq-item">
+                <p class="question">How do the exported files look like?</p>
+                <p class="answer"> I've uploaded sample files here: .
+                    
+                </p>
+            </div>
+        </div>
+
+	    <div class="faq-item">
+                <p class="question">The app crashes when I upload a valid onnx file!</p>
+                <p class="answer"> Send me an email.</p>
+            </div>
+        </div>
+        
+        <div class="contact-section">
+            <h2>Still Have Questions?</h2>
+            <p> I try to respond to emails the same day, but this is sometimes not possible (in part due to timezones).</p>
+            <a href="mailto:garazraz@outlook.com?subject=[OnnxViewer] <Your subject>" class="contact-button">Contact me</a>
+        </div>
+        
+        <footer>
+            <p>&copy; 2025 Onnex. All rights reserved.</p>
+            <p><a href="privacy_policy">Privacy Policy</a></p>
+        </footer>
+    </div>
+</body>
+</html>
+
