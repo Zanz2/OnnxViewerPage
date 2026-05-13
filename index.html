@@ -142,32 +142,36 @@
                 <p class="question">Shape/type info for intermediate edges missing.</p>
                 <p class="answer">The model needs to be exported including the edge shape information,
                     there are many ways to do this depending on framework, some examples: <code><pre>
-                        #Method 1: python
-                        import onnx
-                        from onnx import shape_inference
+            #-----------------------
+            #Method 1: python
+            import onnx
+            from onnx import shape_inference
 
-                        model = onnx.load("model.onnx")
-                        inferred = shape_inference.infer_shapes(model, data_prop=True)
-                        onnx.save(inferred, "model_with_shapes.onnx")
+            model = onnx.load("model.onnx")
+            inferred = shape_inference.infer_shapes(model, data_prop=True)
+            onnx.save(inferred, "model_with_shapes.onnx")
+            
+            #-----------------------
+            #Method 2: onnx-cli
+            pip install onnxcli
+            onnx infershape model.onnx model_with_shapes.onnx
 
-                        #Method 2: onnx-cli
-                        pip install onnxcli
-                        onnx infershape model.onnx model_with_shapes.onnx
+            #-----------------------
+            #Method 3: ssi4onnx
+            pip install ssi4onnx
+            ssi4onnx --input_onnx_file_path model.onnx --output_onnx_file_path model_with_shapes.onnx
 
-                        #Method 3: ssi4onnx
-                        pip install ssi4onnx
-                        ssi4onnx --input_onnx_file_path model.onnx --output_onnx_file_path model_with_shapes.onnx
-
-                        #Method 4 native pytorch
-                        torch.onnx.export(
-                            model, dummy_input, "model.onnx",
-                            do_constant_folding=True,   # also helps resolve static shapes
-                        )
-                        # Then immediately run inference on the saved file
-                        import onnx
-                        from onnx import shape_inference
-                        m = shape_inference.infer_shapes(onnx.load("model.onnx"), data_prop=True)
-                        onnx.save(m, "model.onnx")
+            #-----------------------
+            #Method 4 native pytorch
+            torch.onnx.export(
+                model, dummy_input, "model.onnx",
+                do_constant_folding=True,   # also helps resolve static shapes
+            )
+            # Then immediately run inference on the saved file
+            import onnx
+            from onnx import shape_inference
+            m = shape_inference.infer_shapes(onnx.load("model.onnx"), data_prop=True)
+            onnx.save(m, "model.onnx")
                 </code></pre>
             <strong>Note that in some cases (for example with data dependent shapes, control flow with mismatched branch shapes and custom ops) exporting the shape data simply isnt possible.</strong>
             </p>
