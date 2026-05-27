@@ -172,7 +172,7 @@ import onnx
 from onnx import shape_inference
 m = shape_inference.infer_shapes(onnx.load("model.onnx"), data_prop=True)
 onnx.save(m, "model.onnx")
-                </code></pre>
+                </pre></code>
             <strong>Note that in some cases (for example with data dependent shapes, control flow with mismatched branch shapes and custom ops) exporting the shape data simply isnt possible.</strong>
             </p>
             </div>
@@ -190,6 +190,12 @@ onnx.save(m, "model.onnx")
 	    <div class="faq-item">
                 <p class="question">The app crashes when I upload a valid onnx file!</p>
                 <p class="answer"> Send me an email.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+                <p class="question">How is the graph layed out? How is the placement of nodes calculated?</p>
+                <p class="answer"> Onnex uses Dagre (https://github.com/dagrejs/dagre), a javascript directed graph layout library.</p>
             </div>
         </div>
         
