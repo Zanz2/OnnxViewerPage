@@ -1,14 +1,14 @@
-# Privacy Policy for Onnex - Onnx Analyzer
+# Privacy Policy for OxViz - Onnx Analyzer
 
 **Effective Date: August 19, 2025**
 
 ## Introduction
 
-Welcome to the privacy policy page for Onnex - Onnx Analyzer. We respect your privacy and are committed to protecting it. This Privacy Policy explains our practices regarding your information when you use our application.
+Welcome to the privacy policy page for OxViz - Onnx Analyzer. We respect your privacy and are committed to protecting it. This Privacy Policy explains our practices regarding your information when you use our application.
 
 ## Summary
 
-**Onnex - Onnx Analyzer does not collect, store, or transmit any personal data.** All processing occurs locally on your device, and no information leaves your device through our application.
+**OxViz - Onnx Analyzer does not collect, store, or transmit any personal data.** All processing occurs locally on your device, and no information leaves your device through our application.
 
 ## Information We Don't Collect
 
